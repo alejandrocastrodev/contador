@@ -1,0 +1,59 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tiempo de generación: 05-11-2012 a las 09:10:17
+-- Versión del servidor: 6.0.4
+-- Versión de PHP: 6.0.0-dev
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Base de datos: `contador`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `box`
+-- 
+
+CREATE TABLE `box` (
+  `box_id` int(2) NOT NULL,
+  `box_current` varchar(3) COLLATE utf8_spanish_ci NOT NULL,
+  `box_type` int(1) NOT NULL,
+  `box_date` datetime NOT NULL,
+  PRIMARY KEY (`box_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- 
+-- Volcar la base de datos para la tabla `box`
+-- 
+
+INSERT INTO `box` VALUES (1, '565', 1, '2012-11-01 13:00:02');
+INSERT INTO `box` VALUES (2, '564', 1, '2012-11-01 12:59:33');
+INSERT INTO `box` VALUES (3, '573', 1, '2012-11-01 13:26:09');
+INSERT INTO `box` VALUES (4, '575', 1, '2012-11-01 13:28:46');
+INSERT INTO `box` VALUES (5, '--', 0, '0000-00-00 00:00:00');
+INSERT INTO `box` VALUES (6, '--', 0, '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `control`
+-- 
+
+CREATE TABLE `control` (
+  `control_id` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
+  `current_global` int(3) NOT NULL,
+  PRIMARY KEY (`control_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- 
+-- Volcar la base de datos para la tabla `control`
+-- 
+
+INSERT INTO `control` VALUES ('1', 575);
+INSERT INTO `control` VALUES ('2', 32);
+INSERT INTO `control` VALUES ('0', 0);
